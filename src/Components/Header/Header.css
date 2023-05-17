@@ -1,0 +1,47 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  padding: 12px;
+  position: relative; /*relative to*/
+  align-items: center;
+}
+
+.menu {
+  background-color: #f4f4f4;
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.menuIcon {
+  font-size: 24px;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.web-menu {
+  display: flex;
+}
+
+.logo {
+  display: flex;
+  font-size: 36px;
+  font-weight: bold;
+  color: rgb(49, 155, 255);
+}
+
+@media only screen and (max-width: 720px) {
+  .mobile-menu {
+    display: flex;
+  }
+
+  .web-menu {
+    display: none;
+  }
+  .logo {
+    font-size: 24px;
+  }
+}

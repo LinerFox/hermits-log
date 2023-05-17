@@ -1,16 +1,12 @@
-import Home from "./components/Home/Home";
-import Navigation from "./components/Navigation/Navigation";
-import React from "react";
-import Summary from "./components/Summary/Summary";
+import "./App.css";
+
+import Home from "./Components/Home/Home";
+
 function App() {
   return (
-    <>
-      <div className='container'>
-        <Navigation />
-        <Home />
-        <Summary />
-      </div>
-    </>
+    <div className='App'>
+      <Home />
+    </div>
   );
 }
 
