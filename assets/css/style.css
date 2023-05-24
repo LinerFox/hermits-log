@@ -1,0 +1,90 @@
+/* -------------------------- *\
+  #Style.css
+\* -------------------------- */
+
+/* 
+* Copyright (c) 2023 Hermit
+*/
+
+/* -------------------------- *\
+  #CUSTOM PROPERTIES
+\* -------------------------- */
+:root {
+  /* Colors */
+
+  /* Background Colors */
+  --bg-wb-yonder: hsla(216, 33%, 68%, 1);
+  --bg-carolina: hsla(199, 89%, 49%, 1);
+  --bg-prussian: hsla(216, 33%, 20%, 1);
+  --bg-oxford: hsla(222, 44%, 13%, 1);
+
+  /* Text Colors */
+  --text-white: hsla(0, 0%, 100%, 1);
+  --text-ab: hsla(216, 100%, 95%, 1);
+  --text-cb: hsla(199, 0%, 100%, 1);
+
+  /* Border Colors */
+  --border-wb-yonder: hsla(216, 33%, 68%, 1);
+  --border-prussian: hsla(216, 33%, 20%, 1);
+  --border-white: hsl(0, 0%, 100%);
+  --border-white-alpha: hsla(0, 0%, 100%, 0.15);
+
+  /* Default Colors */
+  --white: hsl(0, 0%, 100%);
+  --black: hsla(0, 0&, 0%, 1);
+
+  /* Font Family */
+  --font-family-noto-sans: "Noto Sans", sans-serif;
+
+  /* Font Sizes */
+  --font-size-1: 2.9rem;
+  --font-size-2: 2rem;
+  --font-size-3: 1.8rem;
+  --font-size-4: 1.6rem;
+  --font-size-5: 1.5rem;
+  --font-size-6: 1.4rem;
+
+  /* Font Weights */
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* Line Height */
+  --line-height-1: 1.3;
+  --line-height-2: 1.5;
+  --line-height-4: 1.5;
+
+  /* Box Shadow */
+  --shadow-1: 0 8px 20px 0 hsla(0, 0%, 0%, 0.05);
+  --shadow-2: 0px 3px 20px hsla(180, 90%, 43%, 0.2);
+
+  /* Border Radius */
+  --radius-6: 6px;
+  --radius-8: 8px;
+  --radius-16: 16px;
+  --radius-48: 48px;
+  --radius-circle: 50%;
+  --radius-pill: 200px;
+
+  /* SPACING */
+  --section-padding: 70px;
+
+  /* TRANSITION */
+  --transition-1: 0.25s ease;
+  --transition-2: 0.5s ease;
+  --cubic-in: cubic-bezier(0.51, 0.03, 0.64, 0.28);
+  --cubic-out: cubic-bezier(0.5, 0.83, 0.52, 0.97);
+}
+
+/* -------------------------- *\
+  #RESETS
+\* -------------------------- */
+
+/* -------------------------- *\
+  #REUSED STYLES
+\* -------------------------- */
+
+/* -------------------------- *\
+  #HEADER  
+\* -------------------------- */
