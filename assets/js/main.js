@@ -69,3 +69,11 @@ const prevSliderItem = function () {
 sliderPrevBtn.addEventListener("click", prevSliderItem);
 
 // RESPONSIVE
+window.addEventListener("resize", () => {
+  totalVisibleSliderItems = Number(
+    getComputedStyle(slider).getPropertyValue("--slider-items")
+  );
+  totalSlidableItems =
+    sliderContainer.childElementCount - totalVisibleSliderItems;
+  moveSliderPosition();
+});
