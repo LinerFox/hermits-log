@@ -1,0 +1,16 @@
+{
+  "name": "hermits-log",
+  "version": "1.0.0",
+  "description": "personal blogging platform",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "Joseph Chu",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-upload": "^0.1.0",
+    "nodemon": "^2.0.22"
+  }
+}
