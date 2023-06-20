@@ -21,6 +21,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Configure Git
+        run: |
+          git config --global user.name "Joseph Chu"
+          git config --global user.email "karkinoscode@gmail.com"
+
       - name: Update version
         id: versioning
         run: |
