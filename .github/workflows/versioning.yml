@@ -1,0 +1,30 @@
+name: Versioning
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update_version:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Update version
+        run: |
+          # Extract commit message
+          COMMIT_MSG=$(git log --format=%B -n 1 ${{ github.sha }})
+
+          # Check if the commit message contains 'major' or 'minor'
+          if [[ $COMMIT_MSG == *"major"* ]]; then
+            # Increment major version
+            python increment_version.py major
+          elif [[ $COMMIT_MSG == *"minor"* ]]; then
+            # Increment minor version
+            python increment_version.py minor
+          else
+            echo "No version increment needed"
+          fi
