@@ -60,4 +60,7 @@ body {
 .heading {
   color: #fff;
   text-transform: capitalize;
+  font-size: 80px;
+  line-height: 60px;
+  margin-bottom: 80px;
 }
