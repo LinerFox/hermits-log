@@ -6,14 +6,30 @@ on:
       - main
 
 jobs:
-  update_version:
+  versioning:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
       - name: Update version
+        id: update_version
+        run: |
+          # Add your existing code here to update the version
+
+      - name: Update version and create release
+        id: update_and_release
         run: |
           # Extract commit message
           COMMIT_MSG=$(git log --format=%B -n 1 ${{ github.sha }})
@@ -27,4 +43,12 @@ jobs:
             python increment_version.py minor
           else
             echo "No version increment needed"
+            exit 0  # Exit early if no version increment is needed
           fi
+
+          # Capture the updated version number
+          UPDATED_VERSION=$(cat version.txt)  # Assuming the updated version is stored in a file named "version.txt"
+
+          # Create a new release with the updated version as the tag
+          git tag $UPDATED_VERSION
+          git push origin $UPDATED_VERSION
