@@ -52,3 +52,12 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.content {
+  text-align: center;
+}
+
+.heading {
+  color: #fff;
+  text-transform: capitalize;
+}
