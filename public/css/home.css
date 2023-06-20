@@ -64,3 +64,8 @@ body {
   line-height: 60px;
   margin-bottom: 80px;
 }
+
+.heading .small {
+  display: block;
+  font-size: 40px;
+}
